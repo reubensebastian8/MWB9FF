@@ -26,11 +26,11 @@ const faqs = [
 
 function FAQPage() {
   return (
-    <Container className="py-12">
+    <Container className="py-8 md:py-12 px-4">
       <Row className="mb-8">
         <Col className="text-center">
-          <h1 className="text-3xl font-bold text-blue-800 mb-4">Frequently Asked Questions</h1>
-          <p className="text-lg text-gray-700">Got questions? We’ve got answers. If you don’t see your question here, <a href="/contact" className="text-blue-600 underline">contact us</a>.</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">Frequently Asked Questions</h1>
+          <p className="text-base md:text-lg text-gray-700">Got questions? We’ve got answers. If you don’t see your question here, <a href="/contact" className="text-blue-600 underline">contact us</a>.</p>
         </Col>
       </Row>
       <Row className="justify-center">

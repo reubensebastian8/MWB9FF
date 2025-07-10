@@ -26,25 +26,23 @@ const testimonials = [
 
 function TestimonialsPage() {
   return (
-    <Container className="py-12">
+    <Container className="py-8 md:py-12 px-4">
       <Row className="mb-8">
         <Col className="text-center">
-          <h1 className="text-3xl font-bold text-blue-800 mb-4">Customer Success Stories</h1>
-          <p className="text-lg text-gray-700">See how VendPro is helping people just like you earn more and stress less.</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">Customer Success Stories</h1>
+          <p className="text-base md:text-lg text-gray-700">See how VendPro is helping people just like you earn more and stress less.</p>
         </Col>
       </Row>
-      <Row>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((t, idx) => (
-          <Col md={4} key={idx} className="mb-6">
-            <Card className="h-full shadow border-0">
-              <Card.Body>
-                <p className="italic mb-2">"{t.quote}"</p>
-                <div className="font-semibold text-blue-700">- {t.name}</div>
-              </Card.Body>
-            </Card>
-          </Col>
+          <Card className="h-full shadow border-0" key={idx}>
+            <Card.Body>
+              <p className="italic mb-2">"{t.quote}"</p>
+              <div className="font-semibold text-blue-700">- {t.name}</div>
+            </Card.Body>
+          </Card>
         ))}
-      </Row>
+      </div>
     </Container>
   );
 }

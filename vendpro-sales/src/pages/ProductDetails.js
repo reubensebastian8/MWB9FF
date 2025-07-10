@@ -3,21 +3,15 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 
 function ProductDetails() {
   return (
-    <Container className="py-12">
-      <Row className="mb-8">
-        <Col className="text-center">
-          <h1 className="text-3xl font-bold text-blue-800 mb-4">Our Vending Machines</h1>
-          <p className="text-lg text-gray-700">Engineered for performance, designed for profit. Explore our range of modern vending machines for snacks and drinks.</p>
-        </Col>
-      </Row>
-      <Row className="mb-8">
+    <Container className="py-8 md:py-12 px-4">
+      <Row className="mb-8 flex flex-col md:flex-row">
         <Col md={6} className="flex justify-center mb-6 md:mb-0">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Snack Vending Machine" className="rounded-lg shadow-lg w-full max-w-xs" />
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Snack Vending Machine" className="rounded-lg shadow-lg w-full max-w-xs md:max-w-xs h-auto mx-auto" />
         </Col>
         <Col md={6}>
           <Card className="shadow-md border-0 mb-4">
             <Card.Body>
-              <h3 className="text-xl font-semibold mb-2 text-blue-700">Snack & Drink Combo</h3>
+              <h3 className="text-lg md:text-xl font-semibold mb-2 text-blue-700">Snack & Drink Combo</h3>
               <ul className="list-disc pl-5 text-gray-700">
                 <li>Holds up to 300 snacks and 200 drinks</li>
                 <li>Energy-efficient cooling system</li>
@@ -29,11 +23,11 @@ function ProductDetails() {
           </Card>
         </Col>
       </Row>
-      <Row>
+      <Row className="flex flex-col md:flex-row">
         <Col md={6}>
           <Card className="shadow-md border-0 mb-4">
             <Card.Body>
-              <h3 className="text-xl font-semibold mb-2 text-blue-700">Technical Specifications</h3>
+              <h3 className="text-lg md:text-xl font-semibold mb-2 text-blue-700">Technical Specifications</h3>
               <ul className="list-disc pl-5 text-gray-700">
                 <li>Dimensions: 72"H x 39"W x 33"D</li>
                 <li>Weight: 650 lbs</li>
@@ -47,7 +41,7 @@ function ProductDetails() {
         <Col md={6}>
           <Card className="shadow-md border-0 mb-4">
             <Card.Body>
-              <h3 className="text-xl font-semibold mb-2 text-blue-700">Perfect For</h3>
+              <h3 className="text-lg md:text-xl font-semibold mb-2 text-blue-700">Perfect For</h3>
               <ul className="list-disc pl-5 text-gray-700">
                 <li>Offices & break rooms</li>
                 <li>Gyms & recreation centers</li>

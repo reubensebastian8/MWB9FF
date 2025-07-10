@@ -15,17 +15,17 @@ function ContactPage() {
   };
 
   return (
-    <Container className="py-12">
+    <Container className="py-8 md:py-12 px-4">
       <Row className="mb-8">
         <Col className="text-center">
-          <h1 className="text-3xl font-bold text-blue-800 mb-4">Contact Us</h1>
-          <p className="text-lg text-gray-700">Ready to get started or have questions? Fill out the form below and our team will be in touch soon.</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">Contact Us</h1>
+          <p className="text-base md:text-lg text-gray-700">Ready to get started or have questions? Fill out the form below and our team will be in touch soon.</p>
         </Col>
       </Row>
       <Row className="justify-center">
-        <Col md={6}>
+        <Col xs={12} md={6}>
           {submitted && <Alert variant="success">Thank you! We’ve received your message and will contact you soon.</Alert>}
-          <Form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md">
+          <Form onSubmit={handleSubmit} className="bg-white p-4 md:p-6 rounded shadow-md w-full max-w-md mx-auto">
             <Form.Group className="mb-4" controlId="name">
               <Form.Label>Name</Form.Label>
               <Form.Control type="text" name="name" value={form.name} onChange={handleChange} required />

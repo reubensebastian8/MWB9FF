@@ -42,36 +42,34 @@ const pricingOptions = [
 
 function PricingPage() {
   return (
-    <Container className="py-12">
+    <Container className="py-8 md:py-12 px-4">
       <Row className="mb-8">
         <Col className="text-center">
-          <h1 className="text-3xl font-bold text-blue-800 mb-4">Pricing & Packages</h1>
-          <p className="text-lg text-gray-700">Choose the plan that fits your goals. All packages include setup, training, and support.</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">Pricing & Packages</h1>
+          <p className="text-base md:text-lg text-gray-700">Choose the plan that fits your goals. All packages include setup, training, and support.</p>
         </Col>
       </Row>
-      <Row className="justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {pricingOptions.map((option, idx) => (
-          <Col md={4} key={idx} className="mb-6">
-            <Card className="h-full shadow-lg border-0">
-              <Card.Body>
-                <h3 className="text-xl font-bold text-blue-700 mb-2">{option.title}</h3>
-                <div className="text-3xl font-bold mb-4">{option.price}</div>
-                <ul className="list-disc pl-5 mb-4 text-gray-700">
-                  {option.features.map((f, i) => (
-                    <li key={i}>{f}</li>
-                  ))}
-                </ul>
-                <Button as={Link} to="/contact" size="md" className="bg-blue-600 hover:bg-blue-700 border-0 w-full">Get Started</Button>
-              </Card.Body>
-            </Card>
-          </Col>
+          <Card className="h-full shadow-lg border-0" key={idx}>
+            <Card.Body>
+              <h3 className="text-lg md:text-xl font-bold text-blue-700 mb-2">{option.title}</h3>
+              <div className="text-2xl md:text-3xl font-bold mb-4">{option.price}</div>
+              <ul className="list-disc pl-5 mb-4 text-gray-700">
+                {option.features.map((f, i) => (
+                  <li key={i}>{f}</li>
+                ))}
+              </ul>
+              <Button as={Link} to="/contact" size="md" className="bg-blue-600 hover:bg-blue-700 border-0 w-full md:w-auto">Get Started</Button>
+            </Card.Body>
+          </Card>
         ))}
-      </Row>
+      </div>
       <Row>
         <Col className="text-center mt-8">
-          <h2 className="text-2xl font-bold text-blue-800 mb-2">Need a custom solution?</h2>
-          <p className="mb-4 text-gray-700">Contact us for bulk pricing, custom branding, or unique requirements.</p>
-          <Button as={Link} to="/contact" size="lg" className="bg-green-600 hover:bg-green-700 border-0">Contact Sales</Button>
+          <h2 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">Need a custom solution?</h2>
+          <p className="mb-4 text-gray-700 text-base md:text-lg">Contact us for bulk pricing, custom branding, or unique requirements.</p>
+          <Button as={Link} to="/contact" size="lg" className="bg-green-600 hover:bg-green-700 border-0 w-full md:w-auto">Contact Sales</Button>
         </Col>
       </Row>
     </Container>
