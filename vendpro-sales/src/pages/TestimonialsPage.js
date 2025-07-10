@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
 
 const testimonials = [
   {
@@ -26,24 +25,20 @@ const testimonials = [
 
 function TestimonialsPage() {
   return (
-    <Container className="py-8 md:py-12 px-4">
-      <Row className="mb-8">
-        <Col className="text-center">
-          <h1 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">Customer Success Stories</h1>
-          <p className="text-base md:text-lg text-gray-700">See how VendPro is helping people just like you earn more and stress less.</p>
-        </Col>
-      </Row>
+    <div className="container mx-auto py-8 md:py-12 px-4">
+      <div className="mb-8 text-center">
+        <h1 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">Customer Success Stories</h1>
+        <p className="text-base md:text-lg text-gray-700">See how VendPro is helping people just like you earn more and stress less.</p>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((t, idx) => (
-          <Card className="h-full shadow border-0" key={idx}>
-            <Card.Body>
-              <p className="italic mb-2">"{t.quote}"</p>
-              <div className="font-semibold text-blue-700">- {t.name}</div>
-            </Card.Body>
-          </Card>
+          <div className="bg-white rounded-lg shadow p-6" key={idx}>
+            <p className="italic mb-2">"{t.quote}"</p>
+            <div className="font-semibold text-blue-700">- {t.name}</div>
+          </div>
         ))}
       </div>
-    </Container>
+    </div>
   );
 }
 
